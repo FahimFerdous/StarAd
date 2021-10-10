@@ -1,0 +1,445 @@
+nav .logo {
+  float: left;
+  padding: 10px;
+}
+
+.logo img {
+  height: 60px;
+  width: 125px;
+}
+
+header {
+  width: 100%;
+  background: white;
+  position: fixed;
+  z-index: 10000;
+  transition: all 0.3s ease;
+}
+
+.sticky {
+  box-shadow: 2px 2px 5px gray;
+  transform: translateY(-10%);
+}
+
+nav::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 20px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+nav ul li {
+  float: left;
+
+  margin: 0 5px;
+}
+
+nav ul li:nth-child(3) > ul li:nth-child(3) > ul li:nth-child(1) {
+  width: 220px;
+  top: -50px;
+  left: 120px;
+}
+
+nav ul li:nth-child(4) > ul li:nth-child(1) > ul li {
+  width: 300px;
+  top: -35px;
+  left: 85px;
+}
+
+nav ul li:nth-child(4) > ul li:nth-child(2) > ul li {
+  width: 220px;
+  top: -35px;
+  left: 85px;
+}
+
+nav ul li:nth-child(4) > ul li:nth-child(3) > ul li {
+  width: 300px;
+  top: -35px;
+  left: 85px;
+}
+
+nav ul li:nth-child(4) > ul li:nth-child(4) > ul li {
+  width: 220px;
+  top: -35px;
+  left: 85px;
+}
+
+nav ul li:nth-child(4) > ul li:nth-child(5) > ul li {
+  width: 220px;
+  top: -35px;
+  left: 85px;
+}
+
+nav ul li a {
+  color: #40403f;
+  text-decoration: none;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: all 0.2s ease-in;
+}
+
+nav ul li a:hover {
+  color: #daa208;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #fab908, 0 0 3px #fab908;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 75px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+  z-index: 500;
+}
+
+nav ul li:hover > ul {
+  top: 60px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: inherit;
+  float: none;
+  display: list-item;
+  background: white;
+  padding: 0px 10px 0px 10px;
+}
+
+nav ul ul li:last-child {
+  padding-bottom: 12px;
+}
+
+nav ul ul li a {
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #272727;
+  text-transform: capitalize;
+}
+
+nav ul ul li a:hover {
+  color: rgb(250, 189, 20);
+  box-shadow: none;
+}
+
+nav ul ul ul {
+  border-top: none;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -30px;
+  left: 75px;
+  width: 130px;
+}
+
+nav ul ul ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #272727;
+  text-transform: capitalize;
+}
+
+.main {
+  width: 100%;
+}
+.sliderIMG {
+  width: 100%;
+  height: 750px;
+  padding-top: 83px;
+}
+
+.show,
+.icon,
+input {
+  display: none;
+}
+
+.newsSection {
+  margin-bottom: 40px;
+}
+
+.footerSection {
+  background: #282e3f;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.footerSection .logoContainer {
+  width: 100%;
+  padding: 10px;
+}
+
+.footerSection .logoContainer img {
+  width: 50%;
+  height: 80px;
+}
+
+.footerSection .logoContainer h5 {
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: justify;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  letter-spacing: 1px;
+}
+
+.footerAddress ul {
+  list-style: none;
+}
+
+.footerAddress ul li i {
+  float: left;
+  margin-right: 15px;
+  font-size: 24px;
+  color: rgb(250, 189, 20);
+}
+
+.footerAddress h3,
+.socialMediaSection h3 {
+  color: white;
+  font-size: 24px;
+  padding: 20px;
+  margin-left: 13px;
+}
+
+.footerAddress ul li p {
+  color: white;
+
+  padding-left: 64px;
+  padding-bottom: 20px;
+}
+
+.footerAddress ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-post ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.footer-post ul li {
+  padding: 15px;
+  margin-right: 8px;
+}
+
+.footer-post ul li a {
+  font-size: 20px;
+  color: white;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background: #55acee;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.linkedin {
+  background: #007bb5;
+}
+
+.newsletter {
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.newsletterForm {
+  width: 100%;
+  position: relative;
+}
+
+.footerSection hr {
+  color: white;
+  opacity: 0.2;
+}
+
+.newsletter h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 8%;
+  margin-top: 6%;
+}
+
+.newsletterForm input {
+  padding: 10px 130px 10px 18px;
+  width: 77%;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #8c8c8c;
+  display: block;
+  float: left;
+}
+
+.newsletterForm button {
+  height: 52px;
+  opacity: 1;
+
+  outline: none;
+  width: 90px;
+  background: #ffc107;
+
+  margin-left: -10px;
+  border: none;
+
+  margin-top: -2px;
+  border-radius: 0 3px 3px 0;
+}
+
+.devInfo p {
+  color: white;
+  font-size: 14px;
+}
+
+@media all and (min-width: 1025px) and (max-width: 1140px) {
+  nav ul li {
+    margin: 0px 0px;
+  }
+
+  nav ul li a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 10px;
+  }
+}
+
+.floating_icons {
+  top: 50%;
+  left: 0;
+  position: fixed;
+  transform: translateY(-50%);
+  z-index: 11000;
+}
+
+.floating_icons ul {
+  padding: initial;
+}
+
+.floating_icons ul li {
+  height: 40px;
+  width: 40px;
+  list-style-type: none;
+  padding-left: 12px;
+  padding-top: 6px;
+  margin-top: 5px;
+}
+
+.floating_icons ul li a {
+  color: white;
+}
+
+.floating_icons ul li:hover {
+  padding-left: 30px;
+  width: 80px;
+  transition: 1s;
+}
+
+@media all and (max-width: 1024px) {
+  .mainNavHide {
+    display: none;
+    visibility: hidden;
+  }
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+
+  nav .logo {
+    padding-left: 30px;
+  }
+
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav ul ul li a {
+    font-size: 18px;
+  }
+
+  .show {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0 14px;
+    line-height: 70px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .show:hover {
+    color: rgb(250, 189, 20);
+  }
+
+  .show + a,
+  ul {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+    color: black;
+    position: absolute;
+    right: 40px;
+    line-height: 70px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  nav ul ul ul li {
+    position: static;
+  }
+
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+
+  .investor {
+    text-transform: capitalize;
+  }
+
+  .sliderIMG {
+    width: 100%;
+    height: 500px;
+  }
+}
