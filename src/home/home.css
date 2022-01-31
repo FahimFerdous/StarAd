@@ -160,7 +160,7 @@ nav ul ul ul li a {
 }
 .sliderIMG {
   width: 100%;
-  height: 750px;
+  height: 870px;
   padding-top: 83px;
 }
 
@@ -360,10 +360,11 @@ input {
 }
 
 @media all and (max-width: 1024px) {
-  .mainNavHide {
-    display: none;
+  .hideMenu {
+    display: none !important;
     visibility: hidden;
   }
+
   nav ul {
     margin-right: 0px;
     float: left;
@@ -442,4 +443,31 @@ input {
     width: 100%;
     height: 500px;
   }
+  .footerAddress ul {
+    display: block;
+  }
+  .addressContainer ul {
+    display: block;
+  }
+
+  .FormContainer {
+    margin-top: 20px;
+  }
+}
+
+.underCon img {
+  padding-top: 70px;
+  width: 100%;
+  height: auto;
+}
+
+.whatsappicon img {
+  width: 65px;
+  height: 65px;
+}
+
+.whatsappicon {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
 }

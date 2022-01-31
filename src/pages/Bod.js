@@ -20,7 +20,7 @@ const Bod = () => {
                 <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-12">
                         <BodCard
-                            src="assets/images/Chairman.png"
+                            src="assets/images/Chairman.jpg"
                             name="Ms. Tabassum Kaiser"
                             designation="Chairman"
                             info="Ms. Tabassum Kaiser is an entrepreneur, business
@@ -28,12 +28,12 @@ const Bod = () => {
                                 Partex Agro Ltd. With her deep understanding of business and
                                 her lifelong mission to empower women, focused on
                                 developing entrepreneurial talent, and organizing financial
-                                and marketing resources to enable women to flourish."
+                                and marketing resources to enable women to flourish. As a Member of the Board of Directors of the City Bank Ltd, Ms. Kaiser introduced City Alo to provide exclusive banking facilities for women entrepreneurs. City Alo is the dedicated women banking division of City Bank. Aiming to create one of its kind banking service with a complete banking experience specially designed for women customers. Her dynamic advocacy and policies for women entrepreneurs that includes financial assistance and support to expand business or better manage of personal necessities with a reimagined banking experience and help women to get bank loans."
                         />
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-12">
                         <BodCard
-                            src="assets/images/MD.png"
+                            src="assets/images/MD.jpg"
                             name="Aziz Al Kaiser"
                             designation="Managing Director"
                             info="
@@ -42,7 +42,8 @@ const Bod = () => {
                                 great proportion. A caring parentage and an enterprising
                                 family upbringing helped him aquire his leadership skills and
                                 qualities from childhood. Beyond business colaborations, he takes profound
-                                interest in art, culture and sports."
+                                interest in art, culture and sports. Having completed graduation from UK in Business Management, Kaiser joined his family business. Within a brief span of time, he helped lead the Group to a major spell of diversity that contributed to the Group’s surge forward with strong corporate governance. He also contributed towards the implementation of Group’s major investment from grassroots till completion of the projects and made Partex as a household name in the country. Currently Mr. Kaiser is leading 21 different companies and added more value to the group’s surge with more corporate stakes in banking, insurance, shipping and capital market. 
+                                "
                         />
                     </div>
                 </div>

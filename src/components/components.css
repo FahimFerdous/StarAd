@@ -180,7 +180,7 @@
 .bodContainer img {
   width: 85%;
   padding: 5px;
-  height: 201px;
+  height: auto;
 }
 
 .bodContainer h5 {
@@ -193,6 +193,25 @@
   text-align: justify;
   color: #6a6666;
   padding-top: 70px;
+}
+.bodContainer .info {
+  height: 450px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
 .bodContainer .hr {

@@ -11,6 +11,14 @@ const MainPage = () => {
         <>
             <div className="main">
                 <Carousel>
+
+                    <Carousel.Item interval={7000}>
+                        <img
+                            className="sliderIMG"
+                            src="assets/images/slider/Press-ad-for-Chairman-Sir-6.5-x-6'.jpg"
+                            alt="first slide"
+                        />
+                    </Carousel.Item>
                     <Carousel.Item interval={1500}>
                         <img
                             className="sliderIMG"

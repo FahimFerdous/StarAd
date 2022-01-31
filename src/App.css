@@ -29,3 +29,13 @@
   padding: 10px;
   color: #3f3f3f;
 }
+
+.formContainer {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+
+.formContainer input {
+  display: block;
+}

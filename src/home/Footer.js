@@ -2,9 +2,22 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import "./home.css";
 
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 const Footer = () => {
     return (
         <div className="footerSection">
+
+            <div className="CustomerChat">
+                <div className="whatsappicon">
+                    <a href="https://wa.me/8801313012575" target="_blank"><img src="/assets/images/whatsApp_icon.png" /></a>
+                </div>
+                <MessengerCustomerChat
+                    pageId="1310762088935693"
+                    appId="2797166477251447"
+
+                />
+            </div>
 
             <div className="floating_icons">
                 <ul>

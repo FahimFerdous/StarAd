@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 import Chairman from './pages/Chairman';
 import Md from './pages/Md';
 import UnderConstruction from './pages/UnderConstruction';
+import Prospectus from './admin/Prospectus';
+import SpeficifProduct from './product/SpeficifProduct';
 
 
 function App() {
@@ -44,6 +46,12 @@ function App() {
           </Route>
           <Route path="/underConstruction">
             <UnderConstruction />
+          </Route>
+          <Route path="/prospectus">
+            <Prospectus />
+          </Route>
+          <Route path="/SyntheticResignAdhesive">
+            <SpeficifProduct />
           </Route>
         </Switch>
         <Footer />

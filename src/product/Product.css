@@ -1,0 +1,205 @@
+.ProductImageContainer .mainImageContainer {
+  padding: 5%;
+  border: 1px solid #80808052;
+  display: flex;
+  justify-content: center;
+}
+.main_Image2 {
+  height: 300px !important;
+  width: 100% !important;
+}
+
+.ProductImageContainer h4 {
+  font-size: 20px;
+  padding-bottom: 0px;
+  line-height: 30px;
+  color: #555454;
+}
+
+.thumb-images img {
+  width: 20%;
+  height: 115px;
+  padding: 3%;
+  margin: 2%;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.productInfo {
+  margin-top: 5%;
+  padding-left: 5%;
+}
+
+.productInfo p {
+  font-size: 17px;
+  text-align: justify;
+  padding-right: 6%;
+}
+
+.productInfo h5 {
+  color: gray;
+  font-size: 18px;
+}
+
+.productInfo .sizes {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2%;
+}
+
+.productInfo .sizes button {
+  padding: 2%;
+  width: 22%;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.productInfo .sizes button:hover {
+  background-color: rgb(251, 221, 84);
+  color: white;
+  border: 1px solid rgb(251, 221, 84);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.548);
+}
+
+.productInfo h3 {
+  font-size: 18px;
+  color: #2e2e2e;
+  padding-top: 3%;
+}
+
+#choices * {
+  margin-top: 5px;
+}
+
+.CallSection {
+  margin-top: 5%;
+  margin-left: 5%;
+  border: 1px solid #8d8d8d;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #80808073;
+}
+
+.CallSection p {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.priceContainer {
+  padding-left: 5%;
+}
+
+.priceContainer h4 {
+  color: #595656;
+}
+
+.priceContainer hr {
+  font-size: 14px;
+  color: #757272;
+}
+
+.quantityContainer {
+  padding-left: 5%;
+}
+
+.quantityContainer form {
+  width: 25%;
+}
+
+.quantityContainer .arrow {
+  font-family: "FontAwesome";
+  content: "\f107";
+}
+
+.headingSection {
+  display: flex;
+  margin-top: 3%;
+}
+
+.headingSection p {
+  padding-right: 2%;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1%;
+}
+
+.active {
+  color: #f2b91b;
+  border-bottom: 2px solid #f2b91b;
+  transition: 0.2s ease-in;
+}
+
+.quantityContainer .show {
+  display: inline-block;
+}
+
+.SectionDescription {
+  padding: 2%;
+}
+
+.Placeorder {
+  padding-left: 5%;
+  margin-top: 5%;
+}
+
+.Placeorder button {
+  padding: 2%;
+  width: 40%;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  background-color: rgb(251, 221, 84);
+  color: white;
+  border: 1px solid rgb(251, 221, 84);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+
+  transition: 0.2s all ease-in-out;
+}
+
+.Placeorder button:hover {
+  color: #565e64;
+  background: none;
+  border: 1px solid #565e64;
+  text-shadow: 0px 0px 0px black;
+}
+.modalSection button {
+  text-align: center;
+}
+.modal-content {
+  padding: 3%;
+}
+.form-group {
+  padding: 2%;
+}
+
+.SectionDescription ul {
+  font-size: 18px;
+}
+.SectionDescription ul li {
+  padding: 1%;
+}
+
+@media (min-width: 1420px) {
+  .productDetailContainer {
+    padding-top: 5%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1419px) {
+  .productDetailContainer {
+    padding-top: 6%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+  .productDetailContainer {
+    padding-top: 9%;
+  }
+}

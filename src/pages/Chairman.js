@@ -24,7 +24,18 @@ const Chairman = () => {
                                 <p>Chairman</p>
                                 <hr />
                             </div>
-                            <p>
+                            <p>Star Adhesives Ltd the import substitute of adhesives manufacturer in the country under the largest conglomerates Partex Star Group started with the legacy a New Face Forward. Star Bond has been always with you, You: Our customers, our employees, our shareholders and all our other stakeholders. At our
+                                Company, we have always sought to create sustainable value for you
+                                and for achieving this purpose we have sought to choose the road
+                                less travelled, focusing on innovative initiatives, breakthrough products
+                                and step-change solutions. This is manifest in our standing as one of
+                                Bangladesh’s oldest private sector Group that has survived through
+                                and thrived across various time periods and market cycles. Thus,
+                                despite the year 2020 being remembered as an aberration in our
+                                history, we continued with the same spirit in which the Group was
+                                started, doing what we know best: Creating the foundations for
+                                customer and stakeholder value for tomorrow.</p>
+                            {/* <p>
                                 <b>Ms. Tabassum Kaiser</b> is an entrepreneur, business
                                 leader, Director of Partex Star Group and the Chairman of
                                 Partex Agro Ltd. With her deep understanding of business and
@@ -72,11 +83,11 @@ const Chairman = () => {
                                 She is very well-known socially and holds membership of many
                                 clubs in Dhaka city i.e. Gulshan Club, Uttara Club, Banani
                                 Club etc.
-                            </p>
+                            </p> */}
                         </div>
                         <div className="bodImg col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                             <img
-                                src="assets/images/Chairman.png"
+                                src="assets/images/Chairman.jpg"
                                 alt=""
                             />
                         </div>

@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
+
+import { firebase } from "../firebase"
 import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
-    const history = useHistory()
+    const [isMobileOpen, setisMobileOpen] = useState(false)
 
     const handleReload = () => {
-        history.push('/about')
+        setisMobileOpen(true)
     }
-    /*  window.location.reload(true)
-     useEffect(() => {
- 
-     }, []) */
+
+    const [url, setUrl] = useState()
+    useEffect(() => {
+        firebase.database().ref("StarAdhesive/Prospectus/").on("value", (snapshot) => {
+            setUrl(snapshot.val());
+        });
+    }, [])
+
+
     return (
         <header className="">
             <div className="container fluid">
@@ -19,44 +26,45 @@ const Header = () => {
                     <div className="logo">
                         <img src="assets/images/logo_star_png.png" />
                     </div>
-                    <label for="btn" className="icon">
+                    <label for="btn" className="icon" onClick={() => { setisMobileOpen(false) }}>
                         <span class="fa fa-bars"></span>
                     </label>
                     <input type="checkbox" id="btn" />
-                    <ul className="mainNavUl">
+                    <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                         <li>
-                            <a href="/">Home</a>
+                            <Link to="/" onClick={handleReload}>Home</Link>
                         </li>
                         <li>
                             <label for="btn-1" class="show">
                                 Company +
                             </label>
 
-                            <a href="#">Company</a>
+                            <Link to="#">Company</Link>
                             <input type="checkbox" id="btn-1" />
-                            <ul className="mainNavUl">
+                            <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                 <li>
-                                    <Link to="#" onClick={handleReload}>About Us</Link>
+                                    <Link to="/about" onClick={handleReload}
+                                    >About Us</Link>
                                 </li>
                                 <li>
-                                    <a href="/Chairman">Chairman's Message</a>
+                                    <Link to="/Chairman" onClick={handleReload}>Chairman's Message</Link>
                                 </li>
                                 <li>
-                                    <a href="/MD">Managing Director's Message</a>
+                                    <Link to="/MD" onClick={handleReload}>Managing Director's Message</Link>
                                 </li>
 
 
                                 <li>
-                                    <a href="/underConstruction">Vision & Mission</a>
+                                    <Link to="/underConstruction" onClick={handleReload}>Vision & Mission</Link>
                                 </li>
                                 <li>
-                                    <a href="/Bod">Board of Directors</a>
+                                    <Link to="/Bod" onClick={handleReload}>Board of Directors</Link>
                                 </li>
                                 <li>
-                                    <a href="/management">Management Team</a>
+                                    <Link to="/management" onClick={handleReload}>Management Team</Link>
                                 </li>
                                 <li>
-                                    <a href="/underConstruction">Corporate Social Responsibilities</a>
+                                    <Link to="/underConstruction" onClick={handleReload}>Corporate Social Responsibilities</Link>
                                 </li>
 
 
@@ -67,43 +75,44 @@ const Header = () => {
                                 Investors +
                             </label>
 
-                            <a href="#">Investors</a>
+                            <Link to="#">Investors</Link>
                             <input type="checkbox" id="btn-2" />
-                            <ul>
+                            <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                 <li>
-                                    <a href="/underConstruction">Financials</a>
+                                    <Link to="/underConstruction" onClick={handleReload}>Financials</Link>
                                 </li>
 
 
                                 <li>
-                                    <a href="/underConstruction">Corporate Corner</a>
+                                    <Link to="/underConstruction" onClick={handleReload}>Corporate Corner</Link>
                                 </li>
 
                                 {/* <li>
-                                    <a href="#">Listing Information </a>
+                                    <Link to="#">Listing Information </Link>
                                 </li> */}
                                 <li>
                                     <label for="btn-3" class="show investor">
                                         Investor Center +
                                     </label>
 
-                                    <a href="#">Investor Center</a>
+                                    <Link to="#">Investor Center</Link>
                                     <input type="checkbox" id="btn-3" />
-                                    <ul>
+                                    <ul className={isMobileOpen ? "hideMenu" : ""}>
                                         <li>
                                             <a
-                                                href="assets/1. SAL Signed Draft prospectues of SAL 27.09.2021.pdf"
-                                                download="Star-Adhesive-Prospectus"
+                                                href={url ? url.DownloadUrl : "#"}
+                                                target="_blank"
+                                                download
                                             >
                                                 Draft Prospectus
                                             </a>
                                         </li>
                                         {/* <li>
-                                            <a
-                                                href="#"
+                                            <Link
+                                                to="#"
                                             >
                                                 Final Prospectus
-                                            </a>
+                                            </Link>
                                         </li> */}
                                     </ul>
                                 </li>
@@ -115,59 +124,59 @@ const Header = () => {
                                 Products +
                             </label>
 
-                            <a href="#">Products</a>
+                            <Link to="#">Products</Link>
                             <input type="checkbox" id="btn-9" />
-                            <ul>
+                            <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                 <li>
                                     <label for="btn-4" class="show">
                                         STAR BOND +
                                     </label>
 
-                                    <a href="">STAR BOND</a>
+                                    <Link to="">STAR BOND</Link>
                                     <input type="checkbox" id="btn-4" />
-                                    <ul>
+                                    <ul className={isMobileOpen ? "hideMenu" : ""}>
                                         <li>
-                                            <a href="/underConstruction">Star Bond Synthetic Resin Adhesive</a>
+                                            <a href="/SyntheticResignAdhesive" onClick={handleReload}>Star Bond Synthetic Resin Adhesive</a>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Star Bond Synthetic Rubber Adhesive</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Star Bond Synthetic Rubber Adhesive</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Fix Gel Tube</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Fix Gel Tube</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Distemper Adhesive</a>
-                                        </li>
-                                        {/* <li>
-                                            <Link to="/underConstruction">Super Glue</Link>
+                                            <Link to="/underConstruction" onClick={handleReload}>Distemper Adhesive</Link>
                                         </li>
                                         <li>
-                                            <Link to="/underConstruction">Pure Adhesives</Link>
+                                            <Link to="/underConstruction" onClick={handleReload}>Super Glue</Link>
                                         </li>
                                         <li>
-                                            <Link to="/underConstruction">Synthetic Sprayable Adhesive</Link>
+                                            <Link to="/underConstruction" onClick={handleReload}>Pure Adhesives</Link>
                                         </li>
                                         <li>
-                                            <Link to="/underConstruction">Brake Oil</Link>
+                                            <Link to="/underConstruction" onClick={handleReload}>Synthetic Sprayable Adhesive</Link>
                                         </li>
                                         <li>
-                                            <Link to="/underConstruction">Spray Paint</Link>
+                                            <Link to="/underConstruction" onClick={handleReload}>Brake Oil</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/underConstruction" onClick={handleReload}>Spray Paint</Link>
                                         </li>
 
                                         <li>
                                             <Link to="/underConstruction" onClick={handleReload}>Silicone</Link>
                                         </li>
                                         <li>
-                                            <Link to="/underConstruction">Wood Preservative</Link>
-                                        </li> */}
-                                        <li>
-                                            <a href="/underConstruction">uPVC Solvent Cement</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Wood Preservative</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Fabric Glue</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>uPVC Solvent Cement</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Hot Melt Glue</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Fabric Glue</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/underConstruction" onClick={handleReload}>Hot Melt Glue</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -176,24 +185,24 @@ const Header = () => {
                                         STARLAQ +
                                     </label>
 
-                                    <a href="">STARLAQ</a>
+                                    <Link to="">STARLAQ</Link>
                                     <input type="checkbox" id="btn-5" />
-                                    <ul>
+                                    <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                         <li>
-                                            <a href="/underConstruction">STARLAQ PU Sealer</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>STARLAQ PU Sealer</Link>
                                         </li>
 
                                         <li>
-                                            <a href="/underConstruction">STARLAQ PU Top Coat</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>STARLAQ PU Top Coat</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">STARLAQ Wood Putty</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>STARLAQ Wood Putty</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">STARLAQ Wood Filler</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>STARLAQ Wood Filler</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">STARLAQ Stain</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>STARLAQ Stain</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -202,20 +211,20 @@ const Header = () => {
                                         GUMKING +
                                     </label>
 
-                                    <a href="">GUMKING</a>
+                                    <Link to="">GUMKING</Link>
                                     <input type="checkbox" id="btn-6" />
-                                    <ul>
+                                    <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                         <li>
-                                            <a href="/underConstruction">Gumking Synthetic Resin Adhesive</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Gumking Synthetic Resin Adhesive</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Gumking Synthetic Rubber Adhesive</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Gumking Synthetic Rubber Adhesive</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Grease</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Grease</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Spray Paint</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Spray Paint</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -224,17 +233,17 @@ const Header = () => {
                                         STAR KING +
                                     </label>
 
-                                    <a href="">STAR KING</a>
+                                    <Link to="">STAR KING</Link>
                                     <input type="checkbox" id="btn-7" />
-                                    <ul>
+                                    <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                         <li>
-                                            <a href="/underConstruction">Tiles Cleaner</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Tiles Cleaner</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Floor Cleaner</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Floor Cleaner</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Glass Cleaner</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Glass Cleaner</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -243,14 +252,14 @@ const Header = () => {
                                         CYCLON +
                                     </label>
 
-                                    <a href="">CYCLON</a>
+                                    <Link to="">CYCLON</Link>
                                     <input type="checkbox" id="btn-8" />
-                                    <ul>
+                                    <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                         <li>
-                                            <a href="/underConstruction">Lubricant</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Lubricant</Link>
                                         </li>
                                         <li>
-                                            <a href="/underConstruction">Grease</a>
+                                            <Link to="/underConstruction" onClick={handleReload}>Grease</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -260,25 +269,25 @@ const Header = () => {
                             <label for="btn-11" class="show">
                                 Media +
                             </label>
-                            <a href="#">Media</a>
+                            <Link to="#">Media</Link>
                             <input type="checkbox" id="btn-11" />
-                            <ul>
+                            <ul className={isMobileOpen ? "hideMenu" : "showMenu"}>
                                 <li>
-                                    <a href="/underConstruction">News</a>
+                                    <Link to="/underConstruction" onClick={handleReload}>News</Link>
                                 </li>
                                 <li>
-                                    <a href="/underConstruction">Event</a>
+                                    <Link to="/underConstruction" onClick={handleReload}>Event</Link>
                                 </li>
                                 <li>
-                                    <a href="/underConstruction">Gallery</a>
+                                    <Link to="/underConstruction" onClick={handleReload}>Gallery</Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/underConstruction">Career</a>
+                            <Link to="/underConstruction" onClick={handleReload} >Career</Link>
                         </li>
                         <li>
-                            <a href="/contact">Contact</a>
+                            <Link to="/contact" onClick={handleReload} >Contact</Link>
                         </li>
                     </ul>
                 </nav>

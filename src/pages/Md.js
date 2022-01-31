@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
-import "./pages.css"
+import React, { useEffect } from "react";
+import "./pages.css";
 
 const Md = () => {
     useEffect(() => {
-        document.title = "Managing Director | Star Adhesives"
-    }, [])
+        document.title = "Managing Director | Star Adhesives";
+    }, []);
     return (
         <>
             <div className="aboutUs">
@@ -13,16 +13,12 @@ const Md = () => {
                     <div className="titleText">
                         <h2>Managing Director</h2>
                     </div>
-
                 </div>
-
-
             </div>
 
             <div className="bodsec2">
                 <div className="container fluid">
                     <div className="row">
-
                         <div className="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
                             <div className="secTitle bodText">
                                 <h4>Aziz Al Kaiser</h4>
@@ -30,55 +26,55 @@ const Md = () => {
                                 <hr />
                             </div>
                             <p>
-                                <b>The Managing Director, Aziz Al Kaiser</b> is a successful
-                                industrialist with an appreciable acumen and a vision of
-                                great proportion. A caring parentage and an enterprising
-                                family upbringing helped him hone his leadership skills and
-                                qualities from childhood. Beyond business he takes profound
-                                interest in art, culture and sports. Having completed
-                                graduation from UK in Business Management, Kaiser joined his
-                                family business. Within a brief span of time, he helped lead
-                                the Group to a major spell of diversity that contributed to
-                                the Group’s surge forward with strong corporate governance.
-                                He also contributed towards the implementation of Group’s
-                                major investment from grassroots till completion of the
-                                projects and made Partex as a household name in the country.
-                                Currently Mr. Kaiser is leading 21 different companies and
-                                added more value to the group’s surge with more corporate
-                                stakes in banking, insurance, shipping and capital market.
+                                In the current process of widespread globalization, we Star Bond
+                                understand that meeting our customer's requirement is essential
+                                to the success of our organization. We can say that the years we
+                                experienced in the past are significant years and it is clearly
+                                seen that we have intensively delivery our best performance to
+                                focus on customer satisfaction.
+                            </p>
+                            <p>
+                                On behalf of the Board of Directors, I would like to thank our
+                                valuable customers, Shareholders, Reliable dealers and
+                                world-class suppliers. Besides, I would like to make a special
+                                mention of our staffs’ enthusiastic contribution in establishing
+                                the organization. The one thing I would like to present is that
+                                our leadership is a result of our employees. They have made SAL
+                                as one of the import substitute local brand.{" "}
                             </p>
 
                             <p>
-                                Mr. Kaiser is the Chairman of the City Bank Ltd. He has
-                                contributed tremendously in transforming the management
-                                structure and outlook of City Bank from traditional banking
-                                system to modern day banking. Under his astute stewardship,
-                                The first time of it’s kind in the country, The City Bank
-                                Ltd introduced American Express Corporate Credit Card in
-                                Bangladesh.
+                                We are now in an ever-changing market environment. In such
+                                situation, we firmly believe that “trust” is the key element in
+                                persuading customers to choose our quality products for
+                                sustainability. We accept that “trust” can create a “Win-Win
+                                Situation” for a long deeper relationship.
                             </p>
 
                             <p>
-                                He is very well-known socially and holds membership of many
-                                social clubs in Dhaka city. Having a passion of Sports, he
-                                introduced Partex Sporting Club. He is also the president of
-                                Noakhali Diabetic Association (M.A. Hashem Diabetic
-                                Hospital) and President of the Governing body of M.A. Hashem
-                                College. Mr. Kaiser is also the founder life member of NSU
-                                Trust and also the Member of the Board of trustees of the
-                                North South University.
+                                Our distributed products with latest technologies and excellent
+                                service are diverse. It is easy to find them in every corner of
+                                industrial activity and community living. We will continue our
+                                endless effort to serve our valuable customers.
+                            </p>
+                            <p>
+                                In addition, we SAL will intensively endeavor in environmental
+                                awareness for the purpose of preventing from climate changes and
+                                resources depletion. We are committed to preservation of the
+                                environment we live in. So in summary, I would like to thank
+                                again all those who have contributed relentless hard work and
+                                effort of the past to bring up here today and will continue to
+                                grow for years to come.
                             </p>
                         </div>
                         <div className="bodImg col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <img src="assets/images/MD.png" alt="" />
+                            <img src="assets/images/MD.jpg" alt="" />
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </>
-    )
-}
+    );
+};
 
-export default Md
+export default Md;

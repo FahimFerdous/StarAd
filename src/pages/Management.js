@@ -19,7 +19,7 @@ const Management = () => {
 
             <div className="DirectorPanel">
                 <div className="container">
-                    <h3 style={{ paddingTop: '50px' }}>LEADERSHIP TEAM</h3>
+                    {/* <h3 style={{ paddingTop: '50px' }}>LEADERSHIP TEAM</h3> */}
                     <div className="row">
                         <div class="infoContainer col-xl-4 pl-35 pr-54 lg-pr-15 lg-pl-15">
                             <img src="assets/images/image67.png" />
@@ -38,9 +38,14 @@ const Management = () => {
                             <h6>Group CFO</h6>
                         </div>
                         <div class="infoContainer col-xl-4 pl-35 pr-54 lg-pr-15 lg-pl-15">
-                            <img src="assets/images/Mdmiran.jpeg" />
+                            <img src="assets/images/Miran Sir.jpeg" />
                             <h4>Md. Miran Khan</h4>
                             <h6>Head of Business</h6>
+                        </div>
+                        <div class="infoContainer col-xl-4 pl-35 pr-54 lg-pr-15 lg-pl-15">
+                            <img src="assets/images/Rabbi Sir.jpeg" />
+                            <h4>N H M Fazle Rabbi</h4>
+                            <h6>Head of Marketing</h6>
                         </div>
                         <div class="infoContainer col-xl-4 pl-35 pr-54 lg-pr-15 lg-pl-15">
                             <img src="assets/images/M5.png" />
@@ -49,9 +54,9 @@ const Management = () => {
                         </div>
 
                         <div
-                            class="infoContainer noIMG col-xl-4 pl-35 pr-54 lg-pr-15 lg-pl-15"
+                            class="infoContainer col-xl-4 pl-35 pr-54 lg-pr-15 lg-pl-15"
                         >
-
+                            <img src="assets/images/P-30333.jpg" />
                             <h4>Shibbir Hossain</h4>
                             <h6>Head of Business Development</h6>
                         </div>
